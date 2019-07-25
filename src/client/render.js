@@ -6,7 +6,6 @@ const Constants = require('../shared/constants');
 
 const { PLAYER_RADIUS, PLAYER_MAX_HP, BULLET_RADIUS, MAP_SIZE } = Constants;
 
-// Get the canvas graphics context
 const canvas = document.getElementById('game-canvas');
 const context = canvas.getContext('2d');
 setCanvasDimensions();
@@ -29,6 +28,7 @@ function render() {
 
   // Draw background
   renderBackground(me.x, me.y);
+  // renderBackgroundImage(me.x, me.y);
 
   // Draw boundaries
   context.strokeStyle = 'black';
@@ -54,8 +54,8 @@ function renderBackground(x, y) {
     backgroundY,
     MAP_SIZE / 2,
   );
-  backgroundGradient.addColorStop(0, 'black');
-  backgroundGradient.addColorStop(1, 'gray');
+  backgroundGradient.addColorStop(0, '#EEDFA0');
+  backgroundGradient.addColorStop(1, '#004562');
   context.fillStyle = backgroundGradient;
   context.fillRect(0, 0, canvas.width, canvas.height);
 }
@@ -71,7 +71,8 @@ function renderPlayer(me, player) {
   context.translate(canvasX, canvasY);
   context.rotate(direction);
   context.drawImage(
-    getAsset('ship.svg'),
+    getAsset('top.svg'),
+    // img,
     -PLAYER_RADIUS,
     -PLAYER_RADIUS,
     PLAYER_RADIUS * 2,

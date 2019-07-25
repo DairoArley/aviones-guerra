@@ -23,14 +23,14 @@ if (process.env.NODE_ENV === 'development') {
 // Listen on port
 const port = process.env.PORT || 3000;
 const server = app.listen(port);
-console.log(`Server listening on port ${port}`);
+console.log(`Servidor en el puerto ${port}`);
 
 // Setup socket.io
 const io = socketio(server);
 
 // Listen for socket.io connections
 io.on('connection', socket => {
-  console.log('Player connected!', socket.id);
+  console.log('Jugador conectado!', socket.id);
 
   socket.on(Constants.MSG_TYPES.JOIN_GAME, joinGame);
   socket.on(Constants.MSG_TYPES.INPUT, handleInput);
