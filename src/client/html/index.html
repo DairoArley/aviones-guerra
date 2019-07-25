@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aviones de guerra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="/assets/icon64.png">
+  <meta property="description" content="A complete example multiplayer .io web game implemented from scratch. Built with Javascript and Node.js. Open source on Github.">
+  <meta property="og:title" content="An example .io game">
+  <meta property="og:description" content="A complete example multiplayer .io web game implemented from scratch. Built with Javascript and Node.js. Open source on Github.">
+  <meta property="og:image" content="/assets/icon1200.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58664433-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58664433-3');
+  </script>
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+  <div id="play-menu" class="hidden">
+    <h1>AVIONES DE GUERRA</h1>
+    <p>
+      Las reglas son simples, no se deje matar y mate a los demás.
+      <br />
+      Instrucciones: Use el mouse para moverse.
+    </p>
+    <hr />
+    <p>
+      <!-- <br /> -->
+      <h4>COMUNICACIONES II</h4>
+      <br />
+      Dairo Arley García Vergara
+      <br />
+      Luis Miguel Miranda Vergara
+    </p>
+    <hr />
+    <input type="text" id="username-input" placeholder="Nombre de Usuario" />
+    <button id="play-button">JUGAR</button>
+  </div>
+  <div id="leaderboard" class="hidden">
+    <table>
+      <tr>
+        <th>Nombre de usuario</th>
+        <th>Puntaje</th>
+      </tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+    </table>
+  </div>
+  <div id="disconnect-modal" class="hidden">
+    <div>
+      <h2>Desconectado del servidor </h2>
+      <hr />
+      <button id="reconnect-button">Compa, reconectese</button>
+    </div>
+  </div>
+</body>
+</html>
